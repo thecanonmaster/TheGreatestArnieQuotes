@@ -1,0 +1,70 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Object",
+"class": "ArnieQuote",
+"language": "GDScript",
+"path": "res://scripts/ArnieQuote.gd"
+}, {
+"base": "Button",
+"class": "CustomButton",
+"language": "GDScript",
+"path": "res://scripts/CustomButton.gd"
+}, {
+"base": "Object",
+"class": "QuoteList",
+"language": "GDScript",
+"path": "res://scripts/QuoteList.gd"
+} ]
+_global_script_class_icons={
+"ArnieQuote": "",
+"CustomButton": "",
+"QuoteList": ""
+}
+
+[application]
+
+config/name="The Greatest Arnie Quotes"
+run/main_scene="res://Main.tscn"
+boot_splash/image="res://images/YAF_logo.png"
+boot_splash/use_filter=false
+config/icon="res://images/TGAQ_icon.png"
+
+[display]
+
+window/size/width=600
+window/size/height=960
+window/dpi/allow_hidpi=true
+window/energy_saving/keep_screen_on=false
+window/handheld/orientation="sensor_portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+window/stretch/shrink=1.5
+
+[global]
+
+fps=false
+frame=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
