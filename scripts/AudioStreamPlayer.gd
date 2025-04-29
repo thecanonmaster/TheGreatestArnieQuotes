@@ -7,7 +7,27 @@ var _end_time: float = 0.0
 var _fade_in_time: float = 0.0
 var _fade_out_time: float = 0.0
 
+func load_mp3(path) -> AudioStreamMP3:
+	var file: File = File.new()
+	if file.open(path, File.READ) == OK:
+		var stream: AudioStreamMP3 = AudioStreamMP3.new()
+		stream.data = file.get_buffer(file.get_len())
+		file.close()
+		return stream
+	return null
+
 func _ready():
+	var stream : AudioStreamMP3 = null
+	stream = load_mp3(OS.get_system_dir(OS.SYSTEM_DIR_MUSIC) + "/TGAQ/stream.mp3")
+		
+	if stream != null:
+		set_stream(stream)
+	else:
+		get_node("/root/MainPanel/SearchEdit").visible = false
+		get_node("/root/MainPanel/AboutButton").visible = false
+		get_node("/root/MainPanel/ScrollContainer").visible = false
+		get_node("/root/MainPanel/NotificationContainer").visible = true
+		
 	Engine.set_target_fps(60)
 	stop()
 
@@ -37,3 +57,12 @@ func _on_Signal_play(start_time: float, end_time: float, fade_in_time: float, fa
 	_fade_out_time = fade_out_time
 	
 	play(start_time)
+
+
+func _on_PermissionsButton_pressed():
+	var stream : AudioStreamMP3 = null
+	if OS.request_permissions():
+		pass
+	stream = load_mp3(OS.get_system_dir(OS.SYSTEM_DIR_MUSIC) + "/TGAQ/stream.mp3")
+	if stream != null:
+		set_stream(stream)

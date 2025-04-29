@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/AudioStreamPlayer.gd" type="Script" id=1]
-[ext_resource path="res://sounds/stream.mp3" type="AudioStream" id=2]
+[ext_resource path="res://ErrorLabel.gd" type="Script" id=2]
 [ext_resource path="res://scripts/GridContainer.gd" type="Script" id=3]
 [ext_resource path="res://images/GARQ_logo.png" type="Texture" id=4]
 [ext_resource path="res://images/GD_logo.png" type="Texture" id=5]
+[ext_resource path="res://sounds/default_stream.mp3" type="AudioStream" id=6]
 [ext_resource path="res://scripts/YoutubeLink.gd" type="Script" id=7]
 [ext_resource path="res://scripts/InfoLabel.gd" type="Script" id=8]
 [ext_resource path="res://custom_theme.tres" type="Theme" id=9]
@@ -16,7 +17,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
+stream = ExtResource( 6 )
 mix_target = 2
 script = ExtResource( 1 )
 
@@ -188,9 +189,65 @@ margin_top = -14.0
 text = "0.0"
 align = 2
 
+[node name="NotificationContainer" type="PanelContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -185.0
+margin_top = -66.0
+margin_right = 183.0
+margin_bottom = 71.0
+
+[node name="PanelContainer" type="Control" parent="NotificationContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 361.0
+margin_bottom = 130.0
+
+[node name="FileInfoLabel" type="Label" parent="NotificationContainer/PanelContainer"]
+anchor_left = 0.506
+anchor_top = 1.0
+anchor_right = 0.506
+anchor_bottom = 1.0
+margin_left = -178.124
+margin_top = -113.0
+margin_right = 175.876
+margin_bottom = -82.0
+text = "You can upload a better quality audio file here:
+(%PATH%)"
+align = 1
+autowrap = true
+script = ExtResource( 2 )
+
+[node name="GotItButton" type="Button" parent="NotificationContainer/PanelContainer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -58.0
+margin_top = -38.0
+margin_right = 59.0
+margin_bottom = -1.0
+text = "Got it!"
+
+[node name="PermissionsButton" type="LinkButton" parent="NotificationContainer/PanelContainer"]
+anchor_left = 0.501
+anchor_top = 1.0
+anchor_right = 0.501
+anchor_bottom = 1.0
+margin_left = -93.354
+margin_top = -66.0
+margin_right = 93.646
+margin_bottom = -49.0
+text = "Request storage permissions"
+
 [connection signal="text_changed" from="SearchEdit" to="ScrollContainer/GridContainer" method="_on_SearchEdit_text_changed"]
 [connection signal="pressed" from="AboutButton" to="ScrollContainer/GridContainer" method="_on_AboutButton_pressed"]
 [connection signal="pressed" from="AboutContainer/PanelContainer/CloseButton" to="ScrollContainer/GridContainer" method="_on_CloseButton_pressed"]
 [connection signal="pressed" from="AboutContainer/PanelContainer/LinkButton" to="AboutContainer/PanelContainer/LinkButton" method="_on_LinkButton_pressed"]
 [connection signal="pressed" from="DebugContainer/PanelContainer/PlayButton" to="DebugContainer/PanelContainer/ParamsEdit" method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="DebugContainer/PanelContainer/StopButton" to="DebugContainer/PanelContainer/ParamsEdit" method="_on_StopButton_pressed"]
+[connection signal="pressed" from="NotificationContainer/PanelContainer/GotItButton" to="ScrollContainer/GridContainer" method="_on_GotItButton_pressed"]
+[connection signal="pressed" from="NotificationContainer/PanelContainer/PermissionsButton" to="AudioStreamPlayer" method="_on_PermissionsButton_pressed"]

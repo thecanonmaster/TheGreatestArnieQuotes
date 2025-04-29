@@ -87,3 +87,9 @@ func _on_AboutButton_pressed():
 
 func _on_CloseButton_pressed():
 	_on_AboutButton_pressed()
+
+
+func _on_GotItButton_pressed():
+	var notification_container: PanelContainer = get_node("/root/MainPanel/NotificationContainer")
+	notification_container.hide()
+	_on_AboutButton_pressed()

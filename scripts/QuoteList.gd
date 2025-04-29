@@ -27,18 +27,18 @@ var list: Array = [
 	ArnieQuote.new("I did nothing!", false,
 		[ ArnieQuote.Movie.TWINS, null ], 18.0, 20.85, 18.1, 20.75),
 				
-	ArnieQuote.new("Dillon! You son of", false,
+	ArnieQuote.new("Dillon! You ***", false,
 		[ ArnieQuote.Movie.PREDATOR, "Dillon! You son of a bitch!" ], 20.85, 24.8, 0.0, 24.5),	
 		
 	ArnieQuote.new("Very carefully", false,
 		[ ArnieQuote.Movie.TERMINATOR_2_JUDGEMENT_DAY, "Listen to me very carefully" ], 
 		24.7, 26.75, 0.0, 26.6),
 		
-	ArnieQuote.new("No shit", true,
+	ArnieQuote.new("No ***", true,
 		[ ArnieQuote.Movie.TOTAL_RECALL, "You are not you, you are me. No shit" ], 
 		26.8, 31.5, 0.0, 31.45),
 		
-	ArnieQuote.new("No shit", false,
+	ArnieQuote.new("No ***", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL, null ], 30.65, 31.5, 0.0, 31.45),
 		
 	ArnieQuote.new("I've seen you before", true,
@@ -105,25 +105,25 @@ var list: Array = [
 	ArnieQuote.new("Blondes", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL, null ], 72.1, 72.8, 0.0, 72.75),
 		
-	ArnieQuote.new("Bullshit #1", false,
+	ArnieQuote.new("Bull*** #1", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL, "Come on, don't bullshit me" ], 72.8, 74.3, 72.9, 74.25),
 		
-	ArnieQuote.new("Bullshit #2", false,
+	ArnieQuote.new("Bull*** #2", false,
 		[ ArnieQuote.Movie.PREDATOR ], 74.25, 74.95, 0.0, 74.85),
 		
-	ArnieQuote.new("Bullshit #3", false,
+	ArnieQuote.new("Bull*** #3", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL ], 74.9, 75.7, 0.0, 0.0),
 		
-	ArnieQuote.new("Bullshit #4", false,
+	ArnieQuote.new("Bull*** #4", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL ], 75.8, 76.5, 0.0, 0.0),
 		
-	ArnieQuote.new("Bullshit #5", false,
+	ArnieQuote.new("Bull*** #5", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL ], 76.4, 77.4, 0.0, 0.0),
 		
-	ArnieQuote.new("Bullshit #6", false,
+	ArnieQuote.new("Bull*** #6", false,
 		[ ArnieQuote.Movie.COMMANDO ], 77.4, 79.2, 0.0, 79.1),
 		
-	ArnieQuote.new("It's all bullshit", true,
+	ArnieQuote.new("It's all bull***", true,
 		[ ArnieQuote.Movie.PREDATOR, 
 		"You set us up! It's all bullshit, all of it" ], 79.2, 82.9, 0.0, 82.8),
 		
@@ -353,11 +353,11 @@ var list: Array = [
 	ArnieQuote.new("If it bleeds", false,
 		[ ArnieQuote.Movie.PREDATOR, "If it bleeds, we can kill it" ], 242.05, 244.5, 242.1, 244.4),
 		
-	ArnieQuote.new("Get your ass to Mars", true,
+	ArnieQuote.new("Get your *** to Mars", true,
 		[ ArnieQuote.Movie.TOTAL_RECALL, "Now this is the plan: get your ass to Mars" ], 
 		244.6, 247.25, 244.7, 247.15),
 	
-	ArnieQuote.new("Get your ass to Mars", false,
+	ArnieQuote.new("Get your *** to Mars", false,
 		[ ArnieQuote.Movie.THE_RUNNING_MAN, null ], 246.0, 247.25, 0.0, 247.15),
 		
 	ArnieQuote.new("Traffic", true,
@@ -513,6 +513,10 @@ var list: Array = [
 		"We are going to play a wonderful game called who is your daddy, and what does he do" ], 
 		336.5, 341.55, 337.0, 341.5),
 		
+	ArnieQuote.new("Who is your daddy", false,
+		[ ArnieQuote.Movie.KINDERGARTEN_COP, null ], 
+		338.98, 341.55, 338.5, 341.5),
+		
 	ArnieQuote.new("Cybernetic organism", true,
 		[ ArnieQuote.Movie.TERMINATOR_2_JUDGEMENT_DAY, 
 		"I'm a cybernetic organism, living tissue over a metal endoskeleton" ], 
@@ -585,10 +589,10 @@ var list: Array = [
 		[ ArnieQuote.Movie.COMMANDO, "Fuck you, asshole. Fuck you asshole!" ], 
 		381.7, 385.57, 0.0, 385.42),
 		
-	ArnieQuote.new("*** you ***hole!", false,
+	ArnieQuote.new("*** you ***!", false,
 		[ ArnieQuote.Movie.COMMANDO, null ], 383.97, 385.57, 0.0, 385.42),
 	
-	ArnieQuote.new("The guy's a *** ***hole", false,
+	ArnieQuote.new("The guy's a *** ***", false,
 		[ ArnieQuote.Movie.TOTAL_RECALL, "The guy's a fucking asshole" ], 385.5, 386.92, 0.0, 386.82),
 		
 	#ArnieQuote.new("***holes", false,

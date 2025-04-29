@@ -1,6 +1,6 @@
 extends Label
 
-const SOFTWARE_VERSION = "0.1-"
+const SOFTWARE_VERSION = "0.11-"
 const VERSION = "%VERSION%"
 const Q_COUNT = "%Q_COUNT%"
 
